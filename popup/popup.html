@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Chat GPT Email</title>
+  </head>
+  <body>
+    <div class="modal">
+      <h1>Chat GPT Email</h1>
+      <label for="openai-key">OPEN-AI API KEY</label>
+      <input
+        type="text"
+        id="openai-key"
+        name="openai-key"
+        required
+      ></input>
+      <div class="section">
+        <label for="email-context">Copy Paste your email</label>
+        <textarea
+          type="text"
+          id="email-context"
+          name="email-context"
+          required
+          autocapitalize="off"
+          placeholder="Paste email text or write a new email"
+        ></textarea>
+      </div>
+      <div class="section">
+        <label for="sample-input">Briefly enter what do you want to email</label>
+        <textarea type="text" id="sample-input" name="sample-input">Write a reply to this email</textarea>
+      </div>
+      <button id="generate-response-btn">Generate Response</button>
+      <br />
+      <div id="response-container" class="section" style="display: none">
+        <label for="sample-input">Response</label>
+        <textarea type="text" id="response-textarea"></textarea>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
