@@ -11,7 +11,7 @@ const responseTextArea = document.querySelector(
   ".modal__textarea#response-textarea"
 );
 
-function isValidKey(key){
+function isValidKey(key) {
   return key.length > 0;
 }
 
@@ -26,6 +26,13 @@ function isValidSample(sample) {
 function showError(errorMessage) {
   alert(errorMessage);
 }
+window.addEventListener("load", async () => {
+  const { access_token } = await browser.storage.local.get("access_token");
+  if (access_token) {
+    console.log("access token exists");
+    keyInput.value = access_token;
+  }
+});
 
 generateResponseBtn.addEventListener("click", async function () {
   try {
@@ -40,16 +47,16 @@ generateResponseBtn.addEventListener("click", async function () {
     }
 
     if (!isValidEmailContext(emailContext)) {
-      throw new Error("Invalid Email Context. Please enter a valid Email Context.");
+      throw new Error(
+        "Invalid Email Context. Please enter a valid Email Context."
+      );
     }
 
     if (!isValidSample(sample)) {
       throw new Error("Invalid Sample. Please enter a valid Sample.");
     }
+
     await browser.storage.local.set({ access_token: keyInput.value });
-    console.log("API KEY is stored in browser storage.");
-    // Get the email context and sample input
-    // Send the email context and sample input to the OpenAI API
     const response = await sendToOpenAI(emailContext, sample);
     responseTextArea.innerText = response;
     responseContainer.style.display = "block";
