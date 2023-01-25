@@ -1,5 +1,10 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{afe834e3-e4f7-40eb-a438-bcb2d5a13f33}"
+    }
+  },
   "name": "GPT-3 emailer",
   "description": "A simple extension that replies to email using GPT-3.",
   "version": "1.0",
