@@ -1,4 +1,4 @@
-* GPT-3 emailer is a web browser extension to automate replying to emails.*
+GPT-3 emailer is a web browser extension to automate replying to emails.
 
 ## Installation Instructions
 <img src="images/screenshot.png" width="300">
