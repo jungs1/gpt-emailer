@@ -1,18 +1,19 @@
 * GPT-3 emailer is a web browser extension to automate replying to emails.*
 
 ### Installation Instructions
-![alt text](images/screenshot.png)
+<img src="images/screenshot.png" width="300">
+
 **Google Chrome / Microsoft Edge**
 * Not supported yet
   
 **Mozilla Firefox**
-* [Download and install the latest version](https://addons.mozilla.org/en-US/firefox/addon/gpt-3-emailer/)
+* [Download and install the latest version](https://addons.mozilla.org/en-US/firefox/addon/gpt-3-emailer)
 
 ### Frequently asked questions
 * Is it really 100% free?
   * Yes, GPT-3 Emailer is completely free to use.
 * What is ChatGPT?
-  * ChatGPT is a computer program developed by OpenAI that uses a neural network to understand and generate natural language text. It is trained on a large amount of text data, allowing it to respond to prompts and generate text that resembles human writing.
+  * ChatGPT is a computer cprogram developed by OpenAI that uses a neural network to understand and generate natural language text. It is trained on a large amount of text data, allowing it to respond to prompts and generate text that resembles human writing.
 * Does it access any sensitive email data?
   * No, GPT-3 Emailer does not access any sensitive email data. It only sends data to the AI model when writing a new email. However, there is a similar extension (closed source) that automatically fills in email data for Gmail that may potentially violate the terms of service of Gmail by accessing data without using the official API.
 * Where is the API Token saved?
